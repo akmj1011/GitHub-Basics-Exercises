@@ -30,6 +30,11 @@ Each lesson builds step by step:
 
 ---
 
+## Learn More About GitHub and Git
+
+Official documentation for reference:  
+[About GitHub and Git](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
+
 ## 🗺️ Learning Flow
 - Understand **what Git & GitHub are**  
 - Learn how to **save changes with commits**  
