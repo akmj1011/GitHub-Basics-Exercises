@@ -11,7 +11,7 @@ Each lesson builds step by step:
 ---
 
 ## 📂 Contents
-- [01. Introduction](01-intro.md)
+- [01. Introduction](01-getting-started.md)
 - [02. Setup & Config](02-setup.md)
 - [03. Commits](03-commits.md)
 - [04. Branches](04-branches.md)
