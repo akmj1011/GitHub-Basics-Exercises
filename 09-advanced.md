@@ -1,6 +1,6 @@
 ### `09-advanced.md`
 
-``1`markdown
+````markdown
 # Advanced — Deep Dive & Practical Examples
 
 This file contains deeper explanations of Git internals, advanced commands, recommended workflows, conflict resolution strategies, and practice exercises with solutions.
@@ -163,7 +163,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 - Use PR templates and `.github/` files (CODEOWNERS) to guide reviewers.
 
 ---
-```
+````
 ## 15) Example workflows (copyable commands)
 
 ### A. Simple feature workflow (GitHub Flow)
