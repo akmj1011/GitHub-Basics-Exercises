@@ -12,7 +12,7 @@ git pull                 # Get updates from GitHub
 git checkout -b new-branch # Create & switch to branch
 ```
 
-## 🔑 Setup & Identity
+## ⚙️ Setup & Identity
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
