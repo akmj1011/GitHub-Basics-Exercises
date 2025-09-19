@@ -7,7 +7,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 ---
 
 ## 1) Git internals (simple explanation)
-```bash
+
 - **Working Directory**: The files on your filesystem you edit.
 - **Staging Area (Index)**: Where files go when you `git add` — a snapshot that will become the next commit.
 - **Repository (.git)**: Where commits, refs, objects, hooks, and config live.
@@ -15,7 +15,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 - **Commit SHA**: A unique identifier for each commit (hash). Think of it as a fingerprint for a checkpoint.
 
 **Analogy**: Working directory = your desk, staging area = stack of papers ready to file, `.git` = locked cabinet with all historical folders.
-```
+
 ---
 
 ## 2) Reset vs Revert vs Restore — When to use
@@ -59,75 +59,75 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 ---
 
 ## 5) Stash — practical uses
-
+```bash
 - `git stash push -m "WIP: quick change"` save uncommitted changes
 - `git stash list` to view stashes
 - `git stash apply` or `git stash pop` to restore
 - `git stash branch <branch> stash@{0}` to create a new branch from stash
-
+```
 **Analogy**: Put your work on a sticky pad to free your desk for something urgent, then stick it back later.
 
 ---
 
 ## 6) Cherry-pick
-
+```bash
 - `git cherry-pick <commit-sha>` applies the changes from a commit to your current branch without merging the whole branch.
-
+```
 **Use-case**: You fixed a bug on `main` and want the same fix in `release/1.0` without merging other feature changes.
 
 ---
 
 ## 7) Reflog — recover lost commits
-
+```bash
 - `git reflog` shows where HEAD pointed over time (local operations included).
 - If you accidentally `git reset --hard`, find the old SHA in reflog and run:
   - `git checkout -b recovered <sha>`
-
+```
 **Analogy**: Reflog is a CCTV of your Git HEAD movements.
 
 ---
 
 ## 8) Bisect — find the commit that introduced a bug
-
+```bash
 1. `git bisect start`
 2. `git bisect bad` (current broken commit)
 3. `git bisect good <good-commit-sha>`
 4. Git checks out a middle commit — run your test (manual or automated)
 5. Mark `git bisect good` or `git bisect bad` until it finds offending commit
 6. `git bisect reset` to return to original branch
-
+```
 **Super helpful** when you have lots of commits and a failing test.
 
 ---
 
 ## 9) Tags & Releases
-
+```bash
 - `git tag -a v1.0 -m "Release v1.0"`
 - `git push origin --tags`
 - Use annotated tags for releases (include message & creator metadata)
 - In GitHub, add a Release to attach binaries and release notes
-
+```
 ---
 
 ## 10) Submodules (short)
-
+```bash
 - Add: `git submodule add <url> path`
 - Init & update: `git submodule update --init --recursive`
-
+```
 **Complexity**: Submodules link to specific commits of the external repo — handy but requires care in team workflows.
 
 ---
 
 ## 11) Hooks
-
+```bash
 - Hooks live in `.git/hooks` (client-side) — pre-commit, pre-push, post-merge.
 - Use hooks to run linters, tests, or enforce commit message style.
 - For team-wide hooks, use tools like `husky` (JavaScript) or CI checks in GitHub Actions.
-
+```
 ---
 
 ## 12) Conflicts — how to resolve step-by-step
-
+```bash
 1. During `git merge` or `git rebase`, conflicts are reported.
 2. Open files with conflict markers `<<<<<<`, `======`, `>>>>>>`.
 3. Edit to keep desired changes.
@@ -137,13 +137,13 @@ This file contains deeper explanations of Git internals, advanced commands, reco
    - If rebasing: `git rebase --continue`
 6. If stuck, you can abort:
    - `git merge --abort` or `git rebase --abort`
-
+```
 **Tip:** Use `git status` to see which files are conflicted and `git diff` to inspect differences.
 
 ---
 
 ## 13) Working with remotes safely
-
+```bash
 - Pull vs Fetch:
   - `git fetch` downloads objects and refs but does not alter working directory.
   - `git pull` = `git fetch` + merge (or `--rebase`), which can change working tree.
@@ -153,14 +153,14 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 
 - Force push safely:
   - `git push --force-with-lease` checks remote didn't change unexpectedly.
-
+```
 ---
 
 ## 14) Branch protection & code review best practices (GitHub)
-
+```bash
 - Protect `main` or `release/*` branches: require PR reviews, passing CI, signed commits if needed.
 - Use PR templates and `.github/` files (CODEOWNERS) to guide reviewers.
-
+```
 ---
 
 ## 15) Example workflows (copyable commands)
