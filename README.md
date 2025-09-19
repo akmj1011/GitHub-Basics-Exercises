@@ -12,7 +12,7 @@ Each lesson builds step by step:
 
 ## 📂 Contents
 - [01. Introduction](01-getting-started.md)
-- [02. Setup & Config](02-setup.md)
+- [02. Setup & Config](02-repository.md)
 - [03. Commits](03-commits.md)
 - [04. Branches](04-branches.md)
 - [05. Pull Requests](05-pullrequests.md)
