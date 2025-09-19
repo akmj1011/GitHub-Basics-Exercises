@@ -31,7 +31,7 @@ git config --global alias.ci commit
 ### `Must Know`
 
 ````markdown
-# 08. Git & GitHub Cheat Sheet (Advanced)
+# Git & GitHub Cheat Sheet (Advanced)
 
 ## 🔑 Setup & Identity
 ```bash
