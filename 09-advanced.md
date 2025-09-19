@@ -1,7 +1,7 @@
 ### `09-advanced.md`
 
 ````markdown
-# 09. Advanced — Deep Dive & Practical Examples
+# Advanced — Deep Dive & Practical Examples
 
 This file contains deeper explanations of Git internals, advanced commands, recommended workflows, conflict resolution strategies, and practice exercises with solutions.
 
