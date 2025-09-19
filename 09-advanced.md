@@ -163,7 +163,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 - Use PR templates and `.github/` files (CODEOWNERS) to guide reviewers.
 
 ---
-
+````
 ## 15) Example workflows (copyable commands)
 
 ### A. Simple feature workflow (GitHub Flow)
@@ -176,7 +176,7 @@ git commit -m "feat: add login form"
 git push --set-upstream origin feature/login
 # Open PR on GitHub
 # After review, merge via GitHub (Squash & Merge or Merge Commit)
-````
+```
 
 ### B. Cleaning up commits before pushing (interactive rebase)
 
