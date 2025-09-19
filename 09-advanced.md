@@ -7,7 +7,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 ---
 
 ## 1) Git internals (simple explanation)
-
+```bash
 - **Working Directory**: The files on your filesystem you edit.
 - **Staging Area (Index)**: Where files go when you `git add` — a snapshot that will become the next commit.
 - **Repository (.git)**: Where commits, refs, objects, hooks, and config live.
@@ -15,11 +15,11 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 - **Commit SHA**: A unique identifier for each commit (hash). Think of it as a fingerprint for a checkpoint.
 
 **Analogy**: Working directory = your desk, staging area = stack of papers ready to file, `.git` = locked cabinet with all historical folders.
-
+```
 ---
 
 ## 2) Reset vs Revert vs Restore — When to use
-
+```bash
 - **git reset**: Moves `HEAD` and optionally changes index and working tree. *Rewrites history*. Use for local cleanup before sharing. Examples:
   - `git reset --soft HEAD~1` → move HEAD back 1 commit, keep changes staged.
   - `git reset --mixed HEAD~1` → default; unstage changes but keep them in working dir.
@@ -30,7 +30,7 @@ This file contains deeper explanations of Git internals, advanced commands, reco
 - **git restore** (new): Can restore files from index/HEAD to working tree safely (non-destructive to history).
 
 **Rule of thumb**: If commit is already pushed/shared → prefer `git revert`. If commit is local and not pushed → `git reset` or `git commit --amend` or interactive rebase.
-
+```
 ---
 
 ## 3) Rebase (regular & interactive)
