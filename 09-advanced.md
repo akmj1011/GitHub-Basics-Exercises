@@ -84,4 +84,5 @@
 
 
 **Tip:** Use `git status` to see which files are conflicted and `git diff` to inspect differ
-For any action that rewrites history (reset, rebase, commit --amend), avoid running it on branches shared with others unless your team agrees and you coordinate (or you understand forcing pushes).
+
+- For any action that rewrites history (reset, rebase, commit --amend), avoid running it on branches shared with others unless your team agrees and you coordinate (or you understand forcing pushes).
